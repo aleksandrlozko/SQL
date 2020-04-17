@@ -63,10 +63,6 @@ SELECT movies.release_year AS year,
 
 FROM movies
 
-JOIN movie_country
-
-ON movies.director = movie_country.movie_director
-
 GROUP BY movies.release_year
 
 ORDER BY movies.release_year
