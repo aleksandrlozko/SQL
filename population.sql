@@ -171,3 +171,57 @@ VALUES('The Runner', 'Austin Stark', 'United States');
 
 INSERT INTO movie_country(movie_name,movie_director,movie_country)
 VALUES('6 Years', 'Hannah Fidell', 'United States');
+
+-------------------------
+-- movie_genres table
+-------------------------
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Norm of the North: King Sized Adventure', 'Richard Finn', 'Comedies');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Jandino: Whatever it Takes', 'Tim Maltby', 'Stand-Up Comedy');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('#realityhigh', 'Fernando Lebrija', 'Comedies');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Automata', 'Gabe Ibáñez', 'Kids TV');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Fabrizio Copano: Solo pienso en mi', 'Rodrigo Toro' , 'Stand-Up Comedy');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Good People', 'Henrik Ruben Genz', 'Adventure');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Joaquín Reyes: Una y no más', 'José Miguel Contreras', 'Stand-Up Comedy');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Kidnapping Mr. Heineken', 'Daniel Alfredson', 'Adventure');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Krish Trish and Baltiboy: Battle of Wits', 'Munjal Shroff', 'Family Movies');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Krish Trish and Baltiboy: Best Friends Forever', 'Tilak Shetty', 'Family Movies');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Love', 'Gaspar Noé', 'Dramas');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Manhattan Romance', 'Tom OBrien', 'Comedies');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Moonwalkers', 'Antoine Bardou-Jacquet', 'Adventure');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Rolling Papers', 'Mitch Dickman', 'Documentaries');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('Stonehearst Asylum', 'Brad Anderson', 'Horror');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('The Runner', 'Austin Stark', 'Dramas');
+
+INSERT INTO movie_genres(movie_name,movie_director,movie_genres)
+VALUES('6 Years', 'Hannah Fidell', 'Dramas');
