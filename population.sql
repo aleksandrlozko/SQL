@@ -117,3 +117,57 @@ VALUES('Thailand');
 
 INSERT INTO country(country)
 VALUES('Belgium');
+
+-------------------------
+-- movie_country table
+-------------------------
+INSERT INTO movie_country(name,director,country)
+VALUES('Norm of the North: King Sized Adventure', 'Richard Finn', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Jandino: Whatever it Takes', 'Tim Maltby', 'United Kingdom');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('#realityhigh', 'Fernando Lebrija', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Automata', 'Gabe Ibáñez', 'Bulgaria');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Fabrizio Copano: Solo pienso en mi', 'Rodrigo Toro' , 'Chile');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Good People', 'Henrik Ruben Genz', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Joaquín Reyes: Una y no más', 'José Miguel Contreras', 'Spain');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Kidnapping Mr. Heineken', 'Daniel Alfredson', 'Netherlands');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Krish Trish and Baltiboy: Battle of Wits', 'Munjal Shroff', 'Spain');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Krish Trish and Baltiboy: Best Friends Forever', 'Tilak Shetty', 'Spain');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Love', 'Gaspar Noé', 'France');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Manhattan Romance', 'Tom OBrien', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Moonwalkers', 'Antoine Bardou-Jacquet', 'France');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Rolling Papers', 'Mitch Dickman', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('Stonehearst Asylum', 'Brad Anderson', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('The Runner', 'Austin Stark', 'United States');
+
+INSERT INTO movie_country(name,director,country)
+VALUES('6 Years', 'Hannah Fidell', 'United States');
