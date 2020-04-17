@@ -8,23 +8,23 @@ CREATE TABLE movies (
 
 ALTER TABLE movies ADD CONSTRAINT movies_pk PRIMARY KEY (name, director);
 
-CREATE TABLE cast (
-    cast VARCHAR2(60) NOT NULL
+CREATE TABLE country (
+    country VARCHAR2(60) NOT NULL
 );
 
-ALTER TABLE cast ADD CONSTRAINT cast_pk PRIMARY KEY (cast);
+ALTER TABLE country ADD CONSTRAINT country_pk PRIMARY KEY (country);
 
-CREATE TABLE movie_cast(
+CREATE TABLE movie_country(
     movie_name      VARCHAR2(50) NOT NULL,
     movie_director  VARCHAR2(60) NOT NULL,
-    movie_cast      VARCHAR2(60) NOT NULL
+    movie_country      VARCHAR2(60) NOT NULL
 );
 
-ALTER TABLE movie_cast ADD CONSTRAINT movie_cast_pk PRIMARY KEY (movie_name, movie_director, movie_cast);
+ALTER TABLE movie_country  ADD CONSTRAINT movie_country_pk PRIMARY KEY (movie_name, movie_director, movie_country);
 
-ALTER TABLE movie_cast ADD CONSTRAINT movie_cast_cast_fk FOREIGN KEY (movie_cast) REFERENCES cast(cast);
+ALTER TABLE movie_country  ADD CONSTRAINT movie_country_country_fk FOREIGN KEY (movie_country) REFERENCES country(country);
 
-ALTER TABLE movie_cast ADD CONSTRAINT movie_cast_movie_fk FOREIGN KEY (movie_name, movie_director) REFERENCES movies(name, director);
+ALTER TABLE movie_country  ADD CONSTRAINT movie_country_movie_fk FOREIGN KEY (movie_name, movie_director) REFERENCES movies(name, director);
 
 CREATE TABLE genres (
     genres VARCHAR2(60) NOT NULL
