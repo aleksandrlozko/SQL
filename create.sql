@@ -3,7 +3,7 @@ CREATE TABLE movies (
     director     VARCHAR2(60) NOT NULL,
     release_year NUMBER(4),
     rating       VARCHAR2(10),
-    duration     VARCHAR2(10)
+    duration     NUMBER(4)
 );
 
 ALTER TABLE movies ADD CONSTRAINT movies_pk PRIMARY KEY (name, director);
