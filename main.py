@@ -34,34 +34,32 @@ while record:
 
 #SECOND QUERY
 query = '''
-SELECT movies.name, 
-	movie_genres.movie_genres AS genre, 
-	movies.duration
+SELECT movie_genres.movie_genres AS genres, round(COUNT(name) * 100 / (SELECT SUM(COUNT(movie_genres)) FROM movie_genres GROUP BY movie_genres), 1) AS percentage
 
-FROM movies 
+FROM movies
 
 JOIN movie_genres 
 
 ON movies.name = movie_genres.movie_name
 
-ORDER BY movies.duration DESC'''
+GROUP BY movie_genres.movie_genres
+'''
 
 cursor.execute(query)
 
 record = cursor.fetchone()
 
 print("\nSECOND QUERY")
-print(f"|name{' ' * 46}|genre{' ' * 15}|duration|")
-print('|' + '-' * 50 + '|'+ '-' * 20 + '|' + '-' * 8 + '|')
+print(f"|name{' ' * 21}|percentage|")
+print('|' + '-' * 25 + '|'+ '-' * 10 + '|')
 while record:
-	print(f"|{record[0]:50s}|{record[1]:20s}|{record[2]:8d}|")
+	print(f"|{record[0]:25s}|{record[1]:10f}|")
 	record = cursor.fetchone()
 
 #THIRD QUERY
 query = '''
 SELECT movies.release_year AS year, 
-		COUNT(movies.name) AS amount, 
-		movie_country.movie_country AS country
+		COUNT(movies.name) AS amount
 
 FROM movies
 
@@ -69,11 +67,7 @@ JOIN movie_country
 
 ON movies.director = movie_country.movie_director
 
-JOIN movie_genres 
-
-ON movies.name = movie_genres.movie_name
-
-GROUP BY movies.release_year, movie_country.movie_country
+GROUP BY movies.release_year
 
 ORDER BY movies.release_year
 '''
@@ -83,10 +77,10 @@ cursor.execute(query)
 record = cursor.fetchone()
 
 print("\nTHIRD QUERY")
-print("|year|amount|country       |")
-print('|' + '-' * 4 + '|' + '-' * 6 + '|' + '-' * 14 + '|')
+print("|year|amount|")
+print('|' + '-' * 4 + '|' + '-' * 6 + '|')
 while record:
-	print(f"|{record[0]}|{record[1]:6d}|{record[2]:14s}|")
+	print(f"|{record[0]}|{record[1]:6d}|")
 	record = cursor.fetchone()
 
 
