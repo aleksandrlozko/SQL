@@ -87,3 +87,33 @@ VALUES('Laddaland', 'Sopon Sukdapisit' , 2011, 'TV-MA', 112);
 
 INSERT INTO movies(name,director,release_year,rating,duration)
 VALUES('Next Gen', 'Joe Ksander' , 2018, 'TV-PG', 106);
+
+-------------------------
+-- country table
+-------------------------
+INSERT INTO country(country)
+VALUES('United Kingdom');
+
+INSERT INTO country(country)
+VALUES('United States');
+
+INSERT INTO country(country)
+VALUES('Spain');
+
+INSERT INTO country(country)
+VALUES('Bulgaria');
+
+INSERT INTO country(country)
+VALUES('Chile');
+
+INSERT INTO country(country)
+VALUES('Netherlands');
+
+INSERT INTO country(country)
+VALUES('France');
+
+INSERT INTO country(country)
+VALUES('Thailand');
+
+INSERT INTO country(country)
+VALUES('Belgium');
