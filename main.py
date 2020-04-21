@@ -7,6 +7,8 @@ db = 'localhost:49161/xe'
 connection = cx_Oracle.connect(username, password, db)
 cursor = connection.cursor()
 
+
+
 # FIRST QUERY
 query = '''
 SELECT COUNT(name) AS amount, 
@@ -25,7 +27,8 @@ cursor.execute(query)
 
 record = cursor.fetchone()
 
-print("FIRST QUERY")
+
+print("1 QUERY")
 print("|amount|rating|")
 print('|' + '-' * 6 + '|' + '-' * 6 + '|')
 while record:
@@ -49,7 +52,7 @@ cursor.execute(query)
 
 record = cursor.fetchone()
 
-print("\nSECOND QUERY")
+print("\n2 QUERY")
 print(f"|name{' ' * 21}|percentage|")
 print('|' + '-' * 25 + '|'+ '-' * 10 + '|')
 while record:
@@ -68,11 +71,13 @@ GROUP BY movies.release_year
 ORDER BY movies.release_year
 '''
 
+      
+      
 cursor.execute(query)
 
 record = cursor.fetchone()
 
-print("\nTHIRD QUERY")
+print("\n3 QUERY")
 print("|year|amount|")
 print('|' + '-' * 4 + '|' + '-' * 6 + '|')
 while record:
