@@ -31,9 +31,9 @@ cursor.execute(query)
 x = list()
 y = list()
 
-for pair in cursor.fetchall():
-    x.append(pair[1])
-    y.append(pair[0])
+for par in cursor.fetchall():
+    x.append(par[1])
+    y.append(par[0])
 
 
 fig = go.Figure(data=[go.Bar(x=x, y=y)])
@@ -41,6 +41,8 @@ fig.update_layout(xaxis=dict(title='Rating'),
     yaxis=dict(title='Amount of films'))
 fig.update_layout(title='Кількість фільмів та шоу по рейтингам: R, TV-14, TV-MA')
 py.plot(fig, auto_open=True, filename='bar_chart')
+
+
 
 
 #SECOND
