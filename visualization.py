@@ -12,6 +12,8 @@ connection = cx_Oracle.connect(username, password, db)
 cursor = connection.cursor()
 chart_studio.tools.set_credentials_file(username='aleksandrlozko', api_key='7YGIfBAfWctfWWE5TFPc')
 
+
+
 query = '''
 SELECT COUNT(name) AS amount, 
 		rating
@@ -58,13 +60,14 @@ cursor.execute(query)
 x = list()
 y = list()
 
-for pair in cursor.fetchall():
-    x.append(pair[0])
-    y.append(pair[1])
+for par in cursor.fetchall():
+    x.append(par[0])
+    y.append(par[1])
 
 fig = go.Figure(data=[go.Pie(labels=x, values=y)])
 fig.update_layout(title='Відсоток кожного жанру відносно загальної кількості')
 py.plot(fig, auto_open=True, filename='pie_chart')
+
 
 #THIRD
 query = '''
@@ -82,9 +85,9 @@ cursor.execute(query)
 x = list()
 y = list()
 
-for pair in cursor.fetchall():
-    x.append(pair[0])
-    y.append(pair[1])
+for par in cursor.fetchall():
+    x.append(par[0])
+    y.append(par[1])
 
 fig = go.Figure(data=[go.Scatter(x=x, y=y, mode='lines+markers')])
 fig.update_layout(title='Динаміка випуску фільмів та шоу по роках')
